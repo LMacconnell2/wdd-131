@@ -1,9 +1,33 @@
 body {
     font-size: 1.2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: lightgrey;
 }
 
+header {
+    background-color: blue;
+}
+.brand{
+    display: grid;
+    grid-template-columns: 120px auto;
+    color: whitesmoke;
+}
+.brand > span {
+    max-width: 200px;
+    max-height: 120px;
+    margin: 0 auto;
+}
 .brand > span {
     font-size: 4em;
+}
+.post-summary {
+    background-color: whitesmoke;
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 50px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
