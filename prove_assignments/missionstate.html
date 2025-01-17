@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BYU-Idaho Mission Statement</title>
+    <link rel="stylesheet" href="missionstate.css">
+    <script src="missionstate.js" defer></script>
 </head>
 <body>
-    <header></header>
-        <h1>MISSION STATEMENT</h1>
-        <h2>BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
+    <header>
+        <h1 id="title">MISSION STATEMENT</h1>
+        <h2 id="subtitle">BRIGHAM YOUNG UNIVERSITY-IDAHO</h2>
+        <hr>
+    </header>
     <main>
-        <p>Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter-Day Saints. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities. </p>
-        <p>The university does this by:</p>
+        <p class="p1">Brigham Young University-Idaho was founded and is supported and guided by The Church of Jesus Christ of Latter-Day Saints. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities. </p>
+        <p class="p2">The university does this by:</p>
             <ol>
                 <li>Building testimonies of the restored gospel of Jesus Christ and fostering its principles in a wholesome academic, cultural, and social environment.</li>
                 <li>Providing a high-quality education that prepares students of diverse interests and abilities for lifelong learning and employement.</li>
@@ -20,7 +24,13 @@
             </ol>
     </main>
     <footer>
-        <img src="byui-logo_blue.webp" alt="BYUI logo">
+        <img id="logo" src="byui-logo_blue.webp" alt="BYUI Logo">
+        <section class="select-theme">
+            <p class="label">Choose a theme:</p>
+            <select name="Themes" id="theme-select">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+        </section>
     </footer>
 </body>
 </html>
