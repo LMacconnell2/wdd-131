@@ -79,6 +79,9 @@ figure {
     margin: 25px auto;
 }
 img {
+    width:250px;
+    height:250px;
+    object-fit: cover;
 	max-width: 100%;
     border: 10px solid white;
     box-shadow: 3px 3px 6px;
@@ -104,8 +107,9 @@ img {
     margin-top: 10px;
     margin-bottom: 25px;
     max-height: 700px;
-    max-width: 90%;
     border: 0 solid white;
+    width: 90%;
+    height: 90%;
 
 }
 
