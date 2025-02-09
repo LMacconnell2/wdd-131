@@ -99,3 +99,13 @@ h2, label {
     border-radius: 5px;
     margin-top: 25px;
 }
+
+.errorMsg {
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    padding: 1px;
+}
+
+.hide {
+    display: none;
+}

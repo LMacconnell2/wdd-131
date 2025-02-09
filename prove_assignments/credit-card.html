@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" href="credit-card-favicon.webp">
 </head>
 <body>
+    <p class="errorMsg"></p>
+
     <form id="credit-card-form" method="post">
         <fieldset id="front">
             <div class="front-top">
@@ -22,7 +24,7 @@ height="55px">
                 <label id="card-no" for="card-no">CARD NUMBER:</label>
             </p>
             <p>
-                <input id="card-no-input" type="text" id="card-number" name="card-no" pattern="[0-9]{16}" placeholder="1111 2222 3333 4444" required/>
+                <input id="card-no-input" type="text" id="card-number" name="cardNo" pattern="[0-9]{16}" placeholder="1111 2222 3333 4444" required/>
             </p>
             <p>
                 <label id="card-hold" for="card-hold">CARD HOLDER:</label>
@@ -30,8 +32,8 @@ height="55px">
             </p>
             <p>
                 <input id="holder-input" type="text" id="card-holder" name="card-hold" placeholder="John Doe" required/> 
-                <input id="exp-input-m" type="text" id="expiration-month" name="expiration" pattern="[0-9]{2}" placeholder="M/M" required/>
-                <input id="exp-input-y" type="text" id="expiration-year" name="expiration" pattern="[0-9]{2}" placeholder="Y/Y" required/>
+                <input id="exp-input-m" type="text" id="expiration-month" name="expirationM" pattern="[0-9]{2}" placeholder="M/M" required/>
+                <input id="exp-input-y" type="text" id="expiration-year" name="expirationY" pattern="[0-9]{2}" placeholder="Y/Y" required/>
             </p>
         </fieldset>
         <fieldset id="back">
