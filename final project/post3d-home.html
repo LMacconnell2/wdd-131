@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post 3d - Home</title>
+    <link rel="stylesheet" href="post3d-home.css">
+    <script src="post3d-home.js" defer></script>
+</head>
+<body>
+    <header>
+        <img id="post3dLogo" src="images/post3d-logo.png" alt="post 3d logo">
+        <img id="hamburger" src="images/Hamburger_icon.svg.png" alt="menu-icon">
+        <nav id="nav-bar" class="hi">
+            <a id="nav-item" href="">Recent Posts</a>
+            <a id="nav-item" href="">Random Page</a>
+            <a id="nav-item" href="">About Us</a>
+            <a id="nav-item" href="">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <div class="main-content">
+            <div class="filterbox">
+                <form id="filters">
+                    <fieldset class="searchbox">
+                        <label for="searchbox">Search by name: </label>
+                        <input id="searchbox-input" type="text" name="searchbox">
+                    </fieldset>
+                    <fieldset>Categories: 
+                        <p>
+                            <input id="input" type="checkbox" name="animation">
+                            <label for="animation">Animation</label>
+                        </p>
+                        <p>
+                            <input id="input" type="checkbox" name="modeling">
+                            <label for="modeling">Modeling</label>
+                        </p>
+                        <p>
+                            <input id="input" type="checkbox" name="uvs">
+                            <label for="uvs">UV Mapping</label>
+                        </p>
+                        <p>
+                            <input id="input" type="checkbox" name="tools">
+                            <label for="tools">Useful tools</label>
+                        </p>
+                        <p>
+                            <input id="input" type="checkbox" name="addons">
+                            <label for="addons">Add ons</label>
+                        </p>
+                        <p>
+                            <input id="input" type="checkbox" name="recent">
+                            <label for="recent">Recent Updates</label>
+                        </p>
+                    </fieldset>
+                    <button class="searchButton">Search</button>
+                </form>
+            </div>
+            <h2>Trending Threads:</h2>
+            <section class="threads">
+                <section class="thread-card">
+                    <h3>How to animate steam locomotive drive wheels</h3>
+                    <div class="thread-card-description">
+                        <p>I have been asked numerous times to help people regarding issues with animating....</p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="thread-card-info">
+                        <p>Author: Logan MacConnell</p>
+                        <p>Posted: 02/11/2025</p>
+                    </div>
+                </section>
+                <section class="thread-card">
+                    <h3>How to bake textures in Blender</h3>
+                    <div class="thread-card-description">
+                        <p>"Baking" is not actually like making cookies at home. Instead it allows the user to....</p>
+                        <a href="">Read More</a>
+                    </div>
+                    <div class="thread-card-info">
+                        <p>Author: Logan MacConnell</p>
+                        <p>Posted: 02/12/2025</p>
+                    </div>
+            </section>
+        </div>
+        <div class="hero">
+            <h1>Discover, Learn, Share</h1>
+            <h4>Can't Find What You're Looking For? </h3>
+            <button class="contactButton">Contact Us!</button>
+        </div>
+        <div class="programs">
+            <h2>3d Modeling Programs taught:</h2>
+            <img class="tchImage" src="images/blender-logo.png" alt="Blender Logo">
+            <img class="tchImage" src="images/blender-logo.png" alt="Blender Logo">
+            <img class="tchImage" src="images/blender-logo.png" alt="Blender Logo">
+        </div>
+        <footer>
+            <img src="post3d-logo.png" alt="post 3d logo">
+            <p>© Copyright Post-3d 2025</p>
+        </footer>
+    </main>
+</body>
+</html>
