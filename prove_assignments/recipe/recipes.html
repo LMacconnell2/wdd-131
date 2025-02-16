@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Book</title>
+    <link rel="stylesheet" href="recipes.css">
+    <script src="recipes.js" defer></script>
+    <meta property="og:title" content="Page Title">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Page Description">
+    <meta property="og:image" content="URL to an image">
+    <meta property="og:url" content="URL of the page">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+    <header>
+        <img class="headerimg" src="images/recipe-book.png" alt="recipe book logo">
+        <h1>Recipe Book</h1>
+    </header>
+    <main>
+        <div class="searchcontainer">
+            <input type="text" id="searchbox" name="recipesearch" placeholder="Find a Recipe: ">
+            <img src="images/search.svg" alt="search icon">
+        </div>
+        <div id="showrecipe">
+            <img class="recipeimg" src="images/chocolate-chip-cookies.jpg" alt="chocolate chip cookies image">
+            <div class="recipedesc">
+                <section class="tags">
+                    <h3>tag1</h3>
+                    <h3>tag2</h3>
+                </section>
+                <h2>Dessert Title</h2>
+                <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+	                <span aria-hidden="true" class="icon-star">⭐</span>
+	                <span aria-hidden="true" class="icon-star">⭐</span>
+	                <span aria-hidden="true" class="icon-star">⭐</span>
+	                <span aria-hidden="true" class="icon-star-empty">⭐</span>
+	                <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </div>
+                <p class="description">Description</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023</p>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img class="socialimg" src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img class="socialimg" src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img class="socialimg" src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+    </footer>
+</body>
+</html>

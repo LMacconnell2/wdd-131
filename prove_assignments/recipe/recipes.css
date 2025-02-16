@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: "Amatic SC";
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+    display: flex;
+    font-family: "Amatic SC", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    height: 100px;
+    font-size: 1.8rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+header > img {
+    max-width: 100px;
+    
+}
+
+.searchcontainer {
+    width: 80%;
+    margin: 25px auto;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.searchcontainer > input {
+    height: 50px;
+    width: 80%;
+    border: 0px;
+    border-right: 2px solid black;
+    font-size: 1.5rem;
+}
+.searchcontainer > img {
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.rating {
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+.description {
+    display: none;
+}
+
+#showrecipe {
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+.recipeimg {
+    max-width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.tags {
+    display: flex;
+    width: 80%;
+}
+
+.recipedesc {
+    width: 80%;
+}
+
+h2 {
+    margin-bottom: 0px;
+    color: var(--primary-color);
+}
+
+.tags > h3 {
+    margin-right: 10px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.social > a{
+    width: 100px;
+}
+
+.socialimg {
+    width: 100px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+footer p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .description {
+        display: block;
+    }
+    
+    #showrecipe {
+        border: 2px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 10px;
+        justify-content: left;
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    .recipeimg {
+        max-width: 40%;
+        margin: 5%;
+    }
+    
+    .tags {
+        display: flex;
+        width: 80%;
+    }
+    
+    .recipedesc {
+        width: 40%;
+        margin-top: 5%;
+    }
+
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin: 25px 10%;
+    }
+
+}

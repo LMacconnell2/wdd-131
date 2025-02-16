@@ -279,3 +279,93 @@ const recipes = [
 		rating: 4
 	}
 ]
+const min = 0;
+const max = 7;
+let recipeNumber = getRandomInteger(min, max);
+let ratingNumber = recipes[recipeNumber].rating;
+
+const showRecipeContainer = document.querySelector("#showrecipe");
+const searchButton = document.querySelector(".searchcontainer > img");
+const searchInput = document.querySelector("input");
+
+function filter(query) {
+	// Filter recipes based on the query
+	const filteredRecipes = recipes.filter(recipe =>
+	  recipe.name.toLowerCase().includes(query)
+	);
+  
+	// Sort the filtered recipes alphabetically by name
+	const sortedRecipes = filteredRecipes.sort((a, b) => {
+	  if (a.name.toLowerCase() < b.name.toLowerCase()) {
+		return -1;
+	  }
+	  if (a.name.toLowerCase() > b.name.toLowerCase()) {
+		return 1;
+	  }
+	  return 0;
+	});
+	console.log(sortedRecipes);
+
+	// Loop through the sorted recipes and display them
+	sortedRecipes.forEach(function(recipe) {
+		const tagsHtml = recipe.tags.join(', ');
+		const starsHtml = '★'.repeat(recipe.rating); 
+
+		// Insert the generated content into the container
+		showRecipeContainer.innerHTML = ""
+		showRecipeContainer.insertAdjacentHTML("beforeend", `
+			<img class="recipeimg" src="${recipe.image}" alt="Image of recipe">
+			<div class="recipedesc">
+				<section class="tags">${tagsHtml}</section>
+				<h2>${recipe.name}</h2>
+				<div class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+					${starsHtml}
+				</div>
+				<p class="description">${recipe.description}</p>
+			</div>`);
+	});
+}
+
+function searchHandler(event) {
+	event.preventDefault()
+	let query = searchInput.value.toLowerCase();
+	filter(query)
+}
+
+
+function getRandomInteger(min, max) {
+	return Math.floor(Math.random() * (max - min + 1));
+
+}
+
+const tagsHtml = recipes[recipeNumber].tags.map(tag => `<h3>${tag}</h3>`).join('');
+
+function setStarHtml(ratingNumber) {
+	let starHtml = ""
+	for (let i = 1; i <= 5; i++) {
+		if (ratingNumber >= i) {
+			starHtml += '<span aria-hidden="true" class="icon-star">⭐</span>'
+		}
+		else {
+			starHtml += '<span aria-hidden="true" class="icon-star-empty">☆</span>'
+		}
+	}
+	return starHtml;
+}
+
+const starsHtml = setStarHtml(ratingNumber)
+
+function displayRecipe(recipeNumber){
+	showRecipeContainer.innerHTML = `<img class="recipeimg" src="${recipes[recipeNumber].image}" alt="Image of recipe">
+            <div class="recipedesc">
+                <section class="tags">${tagsHtml}</section>
+                <h2>${recipes[recipeNumber].name}</h2>
+                <div class="rating" role="img" aria-label="Rating: ${recipes[recipeNumber].rating} out of 5 stars">
+	                ${starsHtml}
+                </div>
+                <p class="description">${recipes[recipeNumber].description}</p>
+            </div>`
+}
+
+displayRecipe(recipeNumber);
+searchButton.addEventListener("click", searchHandler);
